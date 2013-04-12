@@ -1,0 +1,38 @@
+# filler
+import os,sys
+from math import sqrt
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
+	
+from brush_class import Brush
+from random import randint as random
+
+class replacing(Brush):
+	displayName	= "Color Replacement Tool";
+	description	= "Replaces a color with the current color.";
+	type 		= "BRUSH";
+	
+	def __init__(this, canvasobject):
+		this.canvas 	= canvasobject;
+		this.setColor 	= False;
+		this.color 		= None;
+		this.type 		= "BRUSH";
+		this.displayName= "Color Replacement Tool"
+		this.description= "Replaces a color with the current color."
+		
+	def leaveStamp(this, x, y):
+		if( not this.canvas.fits(x,y) ): return False;
+		brushsize		= this.canvas.getBrushSize();
+
+
+	def inRange(this, x, y, radius):
+		x_diff          = this.calcDistance(center_x, x);
+		y_diff          = this.calcDistance(center_y, y);
+		diff            = (y_diff * y_diff) + (x_diff * x_diff);
+		if( diff <= brushsize*brushsize )
+			
+	def calcDistance(this, f1, f2):
+		if( f1 - f2 >= 0 ):
+			return f1 - f2;
+		return -1 * ( f1 - f2 );
+	       
