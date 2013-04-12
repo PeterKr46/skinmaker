@@ -107,8 +107,9 @@ class SCanvas:
 		
 	def undoStep(this):
 		if not(this.history.canUndo()):
+			print "Cannot undo."
 			return False
-		for action in history.getLastStep():
+		for action in this.history.getLastStep():
 			x,y	= action[0]
 			before	= action[1]
 			after	= action[2]

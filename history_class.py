@@ -3,7 +3,7 @@
 class History:
 	def __init__(this):
 		this.maxLength = 3;
-		this.current_step_number = 0;
+		this.current_step_number = -1;
 		this.history_list = [];
 		this.current_step = [];
 		
@@ -32,6 +32,7 @@ class History:
 		this.history_list = [];
 		
 	def getLastStep(this):
+		print this.current_step_number
 		return this.history_list[this.current_step_number];
 		
 	def isInCurrentStep(this, x,y):

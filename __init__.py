@@ -75,7 +75,7 @@ class SkinMaker:
 		this.menu = Menu(this.root);
 		this.menu.add_command(label="Save as", command=this.saveDialog);
 		this.menu.add_command(label="Load Skin", command=this.loadDialog);
-		this.menu.add_command(label="Undo");
+		this.menu.add_command(label="Undo", command=this.scanvas.undoStep);
 		this.menu.add_command(label="Redo");
 		this.root.config(menu=this.menu);
 

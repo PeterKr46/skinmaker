@@ -1,8 +1,4 @@
 # standardBrush
-import os,sys
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
-	
 from brush_class import Brush
 
 class standardBrush(Brush):

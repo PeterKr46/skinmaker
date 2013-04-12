@@ -1,9 +1,5 @@
 # colorselector
-import os,sys
-from math import sqrt
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
-	
+from math import sqrt	
 from brush_class import Brush
 from random import randint as random
 

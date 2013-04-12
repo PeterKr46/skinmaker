@@ -1,8 +1,5 @@
 # standardBrush
-import os,sys,random
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
-	
+import random
 from brush_class import Brush
 
 class randomBrush(Brush):
